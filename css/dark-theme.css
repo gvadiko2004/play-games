@@ -1,0 +1,107 @@
+body {
+  background-color: var(--color-black);
+}
+
+.panel-bg-bottom {
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+@media (max-width: 440px) {
+  .panel-bg-bottom {
+    display: none;
+  }
+}
+
+.hand-icon {
+  position: relative;
+  background-image: url("https://i.postimg.cc/8556gm60/hand.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+  -webkit-transform-origin: 52% 62%;
+          transform-origin: 52% 62%;
+}
+@media screen and (max-width: 440px) {
+  .hand-icon {
+    background-size: 15px;
+  }
+}
+
+@-webkit-keyframes swipe-hand {
+  25% {
+    -webkit-transform: translate(20px) rotate(30deg);
+            transform: translate(20px) rotate(30deg);
+  }
+  50% {
+    -webkit-transform: translate(-20px) rotate(-15deg);
+            transform: translate(-20px) rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes swipe-hand {
+  25% {
+    -webkit-transform: translate(20px) rotate(30deg);
+            transform: translate(20px) rotate(30deg);
+  }
+  50% {
+    -webkit-transform: translate(-20px) rotate(-15deg);
+            transform: translate(-20px) rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+@-webkit-keyframes swipe-dot {
+  12% {
+    visibility: visible;
+    width: 40px;
+  }
+  25% {
+    visibility: visible;
+    -webkit-transform: translate(-65px);
+            transform: translate(-65px);
+    width: 20px;
+  }
+  26% {
+    visibility: hidden;
+  }
+}
+@keyframes swipe-dot {
+  12% {
+    visibility: visible;
+    width: 40px;
+  }
+  25% {
+    visibility: visible;
+    -webkit-transform: translate(-65px);
+            transform: translate(-65px);
+    width: 20px;
+  }
+  26% {
+    visibility: hidden;
+  }
+}
+.swipe {
+  position: absolute;
+  bottom: 12%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+@media screen and (max-width: 440px) {
+  .swipe {
+    bottom: 7%;
+  }
+}

@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text&family=Inter:wght@800&family=Raleway:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap");
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-darkgray: #1b1b1b;
+  --color-peach: #ff927a;
+  --color-red: #ff2f2f;
+  --color-limegreen: #aefb30;
+  --color-limegreenAnimate: #9aed15;
+  --color-goldenrod: #f5c12e;
+  --color-gray: #9f9f9f;
+  --gray_bg: rgba(241, 241, 241, 0.2);
+  --gray_bgLight: #f1f1f1;
+  --green: #89cb1e;
+
+  // font-size
+
+  --fs-36: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
+  --fs-22: clamp(0.938rem, 0.85rem + 0.44vw, 1.375rem);
+  --fs-18: clamp(0.75rem, 0.675rem + 0.38vw, 1.125rem);
+
+  // font-family
+
+  --fw-Raleway: "Raleway", sans-serif;
+  --fw-Golos: "Golos Text", sans-serif;
+  --fw-Inter: "Inter", sans-serif;
+}

@@ -1,0 +1,444 @@
+body {
+  background-color: var(--color-white);
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.header-button {
+  background-color: transparent;
+}
+.header-button svg path {
+  stroke: var(--color-black);
+  fill: var(--color-black);
+}
+
+.slider-timer-slide__list-play {
+  color: #000;
+}
+
+.slider-timer-slide__list-teamName {
+  color: #000;
+}
+
+.menu-list {
+  border: 1px solid var(--gray_bgLight);
+}
+
+.menu-list-body__item-link p {
+  color: #000;
+}
+.menu-list-body__item-link circle {
+  color: #000;
+  stroke: #000;
+}
+.menu-list-body__item-link svg {
+  color: #000;
+  stroke: #000;
+}
+.menu-list-body__item-link svg path {
+  color: #000;
+  stroke: #000;
+}
+
+.menu-list {
+  background-color: #fff;
+}
+
+.team-blocks_list-user {
+  background: var(--gray_bg);
+}
+
+.team-blocks_list-user {
+  color: var(--color-black);
+}
+
+.team-blocks_list-name {
+  color: var(--color-black);
+}
+.team-blocks_list-name span {
+  color: var(--color-black);
+}
+
+.team-panel-header_left-team {
+  color: var(--color-black);
+}
+
+.team-panel-header_left-teamTitle {
+  color: var(--color-black);
+}
+
+.team-panel-gamers__title {
+  color: var(--color-black);
+}
+
+.team-panel-gamers__title {
+  color: var(--color-black);
+}
+
+.team-panel-gamers {
+  border: 1px solid var(--gray_bgLight);
+}
+
+.team-blocks_list-cap svg path {
+  color: var(--color-black);
+  stroke: var(--color-black);
+}
+
+.team-panel-header_right div {
+  color: var(--green);
+}
+
+.team-panel-header_right-icon svg path {
+  stroke: var(--green);
+}
+
+.add-gamer-button p {
+  stroke: var(--green);
+}
+.add-gamer-button .add-gamer-button-icon svg path {
+  stroke: var(--green);
+}
+
+.menu-list-body__item-link.active .menu-list-body__item-icon svg circle {
+  stroke: var(--green);
+}
+.menu-list-body__item-link.active .menu-list-body__item-icon svg path {
+  stroke: var(--green);
+}
+
+.panel_buttons-save {
+  background-color: var(--green);
+}
+
+.panel_buttons-random {
+  border: 1.5px solid var(--green);
+  background-color: var(--green);
+}
+
+.panel_buttons {
+  background-color: #fff;
+}
+
+.panel_buttons-random {
+  background-color: #fff;
+}
+
+.rules-banner__title {
+  color: #fff;
+}
+
+.rules-banner-button svg path {
+  fill: #fff;
+}
+
+.rules-banner-button__right span {
+  color: #fff;
+}
+
+.rules-list__item-icon svg path {
+  stroke: var(--color-black);
+}
+
+.inst svg {
+  fill: #000 !important;
+}
+.inst svg path {
+  fill: #000 !important;
+  stroke: var(--color-black);
+}
+
+.tele svg {
+  fill: #000 !important;
+}
+.tele svg path {
+  fill: #000 !important;
+  stroke: var(--color-black);
+}
+
+.brends svg {
+  fill: #000 !important;
+}
+.brends svg path {
+  fill: #000 !important;
+  stroke: var(--color-black);
+}
+
+.rules-list__item-title p {
+  color: var(--color-black);
+}
+
+.rules-list__item::after {
+  position: absolute;
+  content: "";
+  background-color: #f1f1f1;
+  width: 100%;
+  bottom: 0;
+  height: 0.5px !important;
+  left: 0;
+  right: 0;
+}
+
+.rules-list__item-right svg path {
+  stroke: #000;
+}
+
+.menu-list-body__item-link.active svg path {
+  stroke: var(--green);
+}
+
+.rules-list__title::after {
+  position: absolute;
+  content: "";
+  background-color: #f1f1f1;
+  width: 100%;
+  bottom: 0;
+  height: 0.5px !important;
+  left: 0;
+  right: 0;
+}
+.rules-list__title p {
+  color: var(--color-black);
+}
+
+.five {
+  color: var(--color-black);
+}
+
+body.color-dark {
+  background-color: var(--color-white) !important;
+}
+
+.timer__value {
+  color: var(--color-black);
+}
+
+.timer__label-text {
+  color: var(--color-black);
+}
+
+.team-panel-gamers__subtitle {
+  color: var(--color-black);
+}
+
+.hand-icon {
+  position: relative;
+  background-image: url("../images/hand.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+  -webkit-transform-origin: 52% 62%;
+          transform-origin: 52% 62%;
+}
+@media screen and (max-width: 440px) {
+  .hand-icon {
+    background-size: 15px;
+  }
+}
+
+@-webkit-keyframes swipe-hand {
+  25% {
+    -webkit-transform: translate(20px) rotate(30deg);
+            transform: translate(20px) rotate(30deg);
+  }
+  50% {
+    -webkit-transform: translate(-20px) rotate(-15deg);
+            transform: translate(-20px) rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+
+@keyframes swipe-hand {
+  25% {
+    -webkit-transform: translate(20px) rotate(30deg);
+            transform: translate(20px) rotate(30deg);
+  }
+  50% {
+    -webkit-transform: translate(-20px) rotate(-15deg);
+            transform: translate(-20px) rotate(-15deg);
+  }
+  100% {
+    -webkit-transform: translate(0px) rotate(0);
+            transform: translate(0px) rotate(0);
+  }
+}
+@-webkit-keyframes swipe-dot {
+  12% {
+    visibility: visible;
+    width: 40px;
+  }
+  25% {
+    visibility: visible;
+    -webkit-transform: translate(-65px);
+            transform: translate(-65px);
+    width: 20px;
+  }
+  26% {
+    visibility: hidden;
+  }
+}
+@keyframes swipe-dot {
+  12% {
+    visibility: visible;
+    width: 40px;
+  }
+  25% {
+    visibility: visible;
+    -webkit-transform: translate(-65px);
+            transform: translate(-65px);
+    width: 20px;
+  }
+  26% {
+    visibility: hidden;
+  }
+}
+.swipe {
+  position: absolute;
+  bottom: 12%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+@media screen and (max-width: 440px) {
+  .swipe {
+    bottom: 9%;
+  }
+}
+
+.add-gamer-button p,
+.panel_buttons-random p {
+  color: var(--green);
+}
+.add-gamer-button svg path,
+.panel_buttons-random svg path {
+  stroke: var(--green);
+}
+
+.yourCritic,
+.dataUserDYFM {
+  background-color: #f1f1f1;
+}
+.yourCritic::-webkit-input-placeholder, .dataUserDYFM::-webkit-input-placeholder {
+  color: #000;
+}
+.yourCritic::-moz-placeholder, .dataUserDYFM::-moz-placeholder {
+  color: #000;
+}
+.yourCritic:-ms-input-placeholder, .dataUserDYFM:-ms-input-placeholder {
+  color: #000;
+}
+.yourCritic::-ms-input-placeholder, .dataUserDYFM::-ms-input-placeholder {
+  color: #000;
+}
+.yourCritic::placeholder,
+.dataUserDYFM::placeholder {
+  color: #000;
+}
+
+.title-DYFM {
+  color: #000;
+}
+
+.p-text {
+  color: #000;
+}
+
+.panel-social_list-icon svg path {
+  fill: #000;
+}
+
+.panel-social_list-link {
+  border: 1px solid #f1f1f1;
+}
+
+.title-contacts {
+  opacity: 0.58;
+  color: #000;
+}
+
+.rating__title {
+  color: #000;
+}
+
+.rating__actions-title {
+  color: #000;
+}
+
+.rating__actions-rating svg path {
+  stroke: #ff2f2f;
+}
+
+.rating__actions-like.active svg path {
+  fill: #ff2f2f;
+}
+
+.rec__actions-btn {
+  color: #000;
+}
+
+.rec__title {
+  color: #000;
+}
+
+.rules-list__subtitle {
+  color: #000;
+}
+
+.panel-bg-bottom {
+  background-color: #000;
+}
+
+.tPh__label,
+.teamName {
+  color: #000;
+}
+
+.teamPlayer input {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+.teamAdd {
+  border: 1px solid #000;
+}
+
+.teamAdd svg path {
+  stroke: #000;
+}
+
+.teamAdd span {
+  color: #000;
+}
+
+.teamPlayer button svg path {
+  stroke: #000;
+}
+
+.team__card {
+  border: 1px solid #f1f1f1;
+}
+
+.teamName {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.teamDelete .teamAdd__user-icon svg path {
+  stroke: #000;
+}
+
+.teamDelete span {
+  color: #000;
+}

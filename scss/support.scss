@@ -1,0 +1,71 @@
+.panel-social_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 16.5px;
+
+    @media (max-width: 440px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &-item {}
+
+    &-link {
+        display: flex;
+        padding: 19.5px 21px;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex: 1 0 0;
+        border-radius: 7.5px;
+        border: 1.5px solid #1B1B1B;
+
+        @media (max-width: 440px) {
+            padding: 13px 14px;
+        }
+    }
+
+    &-icon {
+        svg {
+            width: 21px;
+            height: 21px;
+
+            @media (max-width: 440px) {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+}
+
+.title-contacts {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    opacity: 0.58;
+    padding: 15px 21px;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    @media (max-width: 440px) {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @media (max-width: 440px) {
+        gap: 10px;
+    }
+}

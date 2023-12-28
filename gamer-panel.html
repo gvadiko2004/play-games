@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My profile</title>
+
+    <link rel="icon" href="./images/Vector.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./module/normalize/normalize.css" />
+    <link rel="stylesheet" href="./module/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./module/swiper/swiper.min.css" />
+
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/dark-theme.css" id="theme-change" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body class="body">
+    <!-- <div id="canvas"></div> -->
+
+    <div class="body-game-bg"></div>
+
+    <main class="main timer-game">
+      <header class="header">
+        <button class="header-button header-voice-button active">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+          >
+            <path
+              d="M10.2402 23.1H14.5825M4.06067 17.8938C4.06066 17.2191 4.36407 16.663 4.99641 15.9151C6.04835 14.6709 6.81644 14.0641 6.81644 12.4363C6.81644 6.19571 9.28399 5.08301 12.3279 5.08301C15.3717 5.08301 17.8393 5.92508 17.8393 12.4363C17.8393 14.0641 18.6074 14.6709 19.6593 15.9151C20.2916 16.663 20.5951 17.2191 20.595 17.8938C20.595 19.2686 19.3424 19.5603 18.2151 19.5603H6.44061C5.31327 19.5603 4.06068 19.2686 4.06067 17.8938Z"
+              stroke="white"
+              stroke-width="3.00625"
+              stroke-linecap="round"
+            />
+            <path
+              d="M1.5459 7.25638C1.5459 5.03654 2.7489 3.09767 4.53852 2.05615"
+              stroke="white"
+              stroke-width="3.00625"
+              stroke-linecap="round"
+            />
+            <path
+              d="M22.5359 7.25638C22.5359 5.03654 21.3329 3.09767 19.5433 2.05615"
+              stroke="white"
+              stroke-width="3.00625"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+
+        <button class="header-button header-voice-button-off">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M4.27869 10.9085V6.09095C4.27869 5.53866 3.83097 5.09095 3.27869 5.09095H2C1.44772 5.09095 1 5.53866 1 6.09095V9.90846C1 10.4607 1.44772 10.9085 2 10.9085H4.27869ZM4.27869 10.9085L6.79616 12.705C7.45808 13.1774 8.37705 12.7042 8.37705 11.891V4.10866C8.37705 3.29548 7.45808 2.82231 6.79617 3.29467L4.69781 4.79212C4.4348 4.97981 4.27869 5.283 4.27869 5.60611L4.27869 10.9085ZM10.6284 10.1268L15 5.87264M15 10.1268L10.6284 5.87264"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+
+        <a href="./timer-game.html" class="header-button header-logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="149"
+            height="16"
+            viewBox="0 0 149 16"
+            fill="none"
+          >
+            <path
+              d="M0.846863 0.0625L8.42434 15.0938H14.4863L17.5173 8.17938L20.5483 15.0938H26.6103L33.8847 0.0625H29.0351L23.5793 11.4863L19.0328 1.86625H16.0018L11.1522 11.4863L5.69645 0.0625H0.846863Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M34.1878 5.47375C34.1878 2.4852 36.6304 0.0625 39.6436 0.0625H56.0109C59.0241 0.0625 61.4667 2.4852 61.4667 5.47375V9.6825C61.4667 12.6711 59.0241 15.0938 56.0109 15.0938H39.6436C36.6304 15.0938 34.1878 12.6711 34.1878 9.6825V5.47375ZM39.6436 4.8725H56.0109C56.3457 4.8725 56.6171 5.14169 56.6171 5.47375V9.6825C56.6171 10.0146 56.3457 10.2838 56.0109 10.2838H39.6436C39.3088 10.2838 39.0374 10.0146 39.0374 9.6825V5.47375C39.0374 5.14169 39.3088 4.8725 39.6436 4.8725Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M92.989 0.0625V15.0938H113.6C116.613 15.0938 119.056 12.6711 119.056 9.6825V5.47375C119.056 2.4852 116.613 0.0625 113.6 0.0625H92.989ZM113.6 4.8725H97.8386V10.2838H113.6C113.935 10.2838 114.206 10.0146 114.206 9.6825V5.47375C114.206 5.14169 113.935 4.8725 113.6 4.8725Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M86.1531 12.6694C88.626 12.4496 90.5643 10.3887 90.5643 7.87875V4.8725C90.5643 2.21601 88.393 0.0625 85.7147 0.0625H64.4977V15.0938H69.3473V12.6888H80.8651L82.9868 15.0938H88.7457L86.1531 12.6694ZM85.7147 4.8725H69.3473V7.87875H85.7147V4.8725Z"
+              fill="white"
+            />
+            <path
+              d="M124.511 9.6825L121.48 0.0625H125.724L127.429 5.47375L142.205 5.47375L143.91 0.0625H148.153L145.122 9.6825H137.242V15.0938H132.392V9.6825H124.511Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+
+        <button class="header-button header-theme-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+          >
+            <path
+              d="M12.0562 4.92575V2.05615M12.0562 23.0999V20.2303M19.7085 12.578H22.5781M1.53436 12.578H4.40397M6.64526 7.16705L4.61615 5.13794M19.4963 20.0181L17.4672 17.989M17.4672 7.16705L19.4963 5.13794M4.61615 20.0181L6.64526 17.989M12.0562 16.4042C13.1244 16.4042 14.0291 16.0335 14.7704 15.2922C15.5117 14.5509 15.8824 13.6462 15.8824 12.578C15.8824 11.5099 15.5117 10.6052 14.7704 9.86386C14.0291 9.12255 13.1244 8.75189 12.0562 8.75189C10.9881 8.75189 10.0834 9.12255 9.34207 9.86386C8.60076 10.6052 8.2301 11.5099 8.2301 12.578C8.2301 13.6462 8.60076 14.5509 9.34207 15.2922C10.0834 16.0335 10.9881 16.4042 12.0562 16.4042Z"
+              stroke="white"
+              stroke-width="3.00625"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <button class="header-button header-theme-button-dark">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 17 16"
+            fill="none"
+          >
+            <path
+              d="M8.97274 15C10.5385 15 11.944 14.5685 13.1895 13.7056C14.1287 13.0549 14.8757 12.2548 15.4304 11.3056C15.6583 10.9157 15.2908 10.4761 14.8442 10.543C14.4883 10.5964 14.1325 10.6231 13.7766 10.6231C11.5882 10.6231 9.72446 9.8536 8.18543 8.31457C6.6464 6.77554 5.87689 4.91181 5.87689 2.72336C5.87689 2.36752 5.90358 2.01167 5.95695 1.65583C6.02394 1.20925 5.5843 0.841714 5.19442 1.06955C4.24516 1.62428 3.44514 2.37126 2.79438 3.3105C1.93146 4.55596 1.5 5.96155 1.5 7.52726C1.5 9.59116 2.22948 11.3526 3.68844 12.8116C5.14741 14.2705 6.90884 15 8.97274 15Z"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <div
+        class="container"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          max-height: 90%;
+          padding-bottom: 300px;
+          overflow-y: auto;
+        "
+      >
+        <div class="content__tab visible" id="teams">
+          <div class="Modal__alert">
+            <div class="modal__inner">
+              <h2 class="modalTitle"></h2>
+
+              <div class="mobal__buttons">
+                <button class="btn_confirm">Так</button>
+
+                <button class="btn_cancel">Ні</button>
+              </div>
+            </div>
+          </div>
+
+          <ul id="teams__group">
+            <li class="team__item" id="${newTeamId}">
+              <div class="team__card">
+                <div class="teamLabel">Команда</div>
+
+                <header class="teamHead__card">
+                  <div class="hT__left">
+                    <input class="teamName" value="" placeholder="" readonly />
+                  </div>
+                  <div class="hT__right">
+                    <button class="editGroupName">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <path
+                          d="M11.9076 2.50914C12.3641 2.96612 12.3641 3.70702 11.9076 4.164L11.1596 4.91273L4.67807 11.4009L1.75 12.25L2.6089 9.3296L9.83845 2.09273C10.295 1.63576 11.0351 1.63576 11.4916 2.09273L11.9076 2.50914Z"
+                          stroke="#AEFB30"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <span>Змінити</span>
+                    </button>
+                  </div>
+                </header>
+                <div class="teamPlayers">
+                  <div class="tP__header">
+                    <div class="tPh__label">Гравці</div>
+                    <div class="tPh__subtitle">
+                      Додайте гравців і введіть імена в поля знизу
+                    </div>
+                  </div>
+
+                  <div class="teamList">
+                    <ul class="teamList__item"></ul>
+                    <div class="teamEdit__bar">
+                      <button class="teamAdd__user">
+                        <div class="teamAdd__user-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                          >
+                            <path
+                              d="M7.09131 1.75V6.9087M7.09131 6.9087V12.25M7.09131 6.9087H1.75M7.09131 6.9087H12.25"
+                              stroke="#AEFB30"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div>
+                        <span>Додати гравця</span>
+                      </button>
+                      <button class="teamDelete">
+                        <div class="teamAdd__user-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M1.46094 5.09436H3.87813M16.2072 5.09436H13.8965M11.5857 5.09436H6.29532M11.5857 5.09436V2.02344H6.29532V5.09436M11.5857 5.09436H13.8965M6.29532 5.09436H3.87813M3.87813 5.09436V16.7698H13.8965V5.09436M7.17706 8.04364V13.3036M10.3695 8.04364V13.3036"
+                              stroke="white"
+                              stroke-width="1.4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+
+                        <span>Видалити команду</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="team__item" id="${newTeamId}">
+              <div class="team__card">
+                <div class="teamLabel">Команда</div>
+
+                <header class="teamHead__card">
+                  <div class="hT__left">
+                    <input class="teamName" value="" placeholder="" readonly />
+                  </div>
+                  <div class="hT__right">
+                    <button class="editGroupName">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <path
+                          d="M11.9076 2.50914C12.3641 2.96612 12.3641 3.70702 11.9076 4.164L11.1596 4.91273L4.67807 11.4009L1.75 12.25L2.6089 9.3296L9.83845 2.09273C10.295 1.63576 11.0351 1.63576 11.4916 2.09273L11.9076 2.50914Z"
+                          stroke="#AEFB30"
+                          stroke-width="2"
+                        />
+                      </svg>
+                      <span>Змінити</span>
+                    </button>
+                  </div>
+                </header>
+                <div class="teamPlayers">
+                  <div class="tP__header">
+                    <div class="tPh__label">Гравці</div>
+                    <div class="tPh__subtitle">
+                      Додайте гравців і введіть імена в поля знизу
+                    </div>
+                  </div>
+
+                  <div class="teamList">
+                    <ul class="teamList__item"></ul>
+                    <div class="teamEdit__bar">
+                      <button class="teamAdd__user">
+                        <div class="teamAdd__user-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                          >
+                            <path
+                              d="M7.09131 1.75V6.9087M7.09131 6.9087V12.25M7.09131 6.9087H1.75M7.09131 6.9087H12.25"
+                              stroke="#AEFB30"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div>
+                        <span>Додати гравця</span>
+                      </button>
+                      <button class="teamDelete">
+                        <div class="teamAdd__user-icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M1.46094 5.09436H3.87813M16.2072 5.09436H13.8965M11.5857 5.09436H6.29532M11.5857 5.09436V2.02344H6.29532V5.09436M11.5857 5.09436H13.8965M6.29532 5.09436H3.87813M3.87813 5.09436V16.7698H13.8965V5.09436M7.17706 8.04364V13.3036M10.3695 8.04364V13.3036"
+                              stroke="white"
+                              stroke-width="1.4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+
+                        <span>Видалити команду</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="teamNav">
+          <button class="teamAdd">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="24"
+              viewBox="0 0 23 24"
+              fill="none"
+            >
+              <path
+                d="M11.4433 2.31641V11.9763M11.4433 11.9763V21.9782M11.4433 11.9763H1.44141M11.4433 11.9763H21.1032"
+                stroke="white"
+                stroke-width="2.80882"
+                stroke-linecap="round"
+              />
+            </svg>
+
+            <span>Додати команду</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="panel_buttons">
+        <a href="#!" class="panel_buttons-save">
+          <p>Зберегти</p>
+        </a>
+
+        <button class="panel_buttons-random">
+          <div class="panel_buttons-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+            >
+              <path
+                d="M2 5.30846L1.75876 4.59831C1.45459 4.70164 1.25 4.98721 1.25 5.30846L2 5.30846ZM12.4751 22.75L12.24 23.4622C12.3923 23.5125 12.5568 23.5126 12.7092 23.4625L12.4751 22.75ZM23 19.2918L23.2341 20.0043C23.5419 19.9031 23.75 19.6158 23.75 19.2918H23ZM23 5.30846H23.75C23.75 4.98681 23.5449 4.70098 23.2402 4.59797L23 5.30846ZM12.4751 1.75L12.7153 1.03951C12.5591 0.986712 12.3899 0.986834 12.2338 1.03986L12.4751 1.75ZM2 19.2918L1.25 19.2918C1.25 19.6154 1.45757 19.9025 1.76488 20.004L2 19.2918ZM1.75269 6.01651L12.2278 9.6752L12.7224 8.25909L2.24731 4.6004L1.75269 6.01651ZM11.7251 8.96715V22.75H13.2251V8.96715H11.7251ZM12.7092 23.4625L23.2341 20.0043L22.7659 18.5792L12.241 22.0375L12.7092 23.4625ZM23.75 19.2918V5.30846H22.25V19.2918H23.75ZM23.2402 4.59797L12.7153 1.03951L12.2349 2.46049L22.7598 6.01895L23.2402 4.59797ZM12.2338 1.03986L1.75876 4.59831L2.24124 6.0186L12.7163 2.46014L12.2338 1.03986ZM1.25 5.30846L1.25 19.2918L2.75 19.2918L2.75 5.30846L1.25 5.30846ZM1.76488 20.004L12.24 23.4622L12.7102 22.0378L2.23512 18.5796L1.76488 20.004ZM12.7213 9.67556L23.2463 6.01687L22.7537 4.60004L12.2288 8.25873L12.7213 9.67556Z"
+                fill="#AEFB30"
+              />
+              <ellipse
+                cx="17.7383"
+                cy="14.09"
+                rx="0.905315"
+                ry="1.57538"
+                fill="#AEFB30"
+              />
+              <ellipse
+                cx="20.2476"
+                cy="10.2873"
+                rx="0.905315"
+                ry="1.57538"
+                fill="#AEFB30"
+              />
+              <ellipse
+                cx="15.2797"
+                cy="18.0441"
+                rx="0.905315"
+                ry="1.57538"
+                fill="#AEFB30"
+              />
+              <ellipse
+                cx="6.98345"
+                cy="14.0896"
+                rx="0.994319"
+                ry="1.73025"
+                fill="#AEFB30"
+              />
+              <ellipse
+                cx="8.97714"
+                cy="5.31882"
+                rx="1.21957"
+                ry="0.779755"
+                fill="#AEFB30"
+              />
+              <ellipse
+                cx="15.8551"
+                cy="5.31882"
+                rx="1.21957"
+                ry="0.779755"
+                fill="#AEFB30"
+              />
+            </svg>
+          </div>
+
+          <p>Рандом гравців</p>
+
+          <div class="btn-ready">
+            <div class="panel_buttons-ready">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+              >
+                <path
+                  d="M15 4.21094L5.66667 12.789L1 8.49997"
+                  stroke="#AEFB30"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+
+            <p>Гравців розміщені</p>
+          </div>
+        </button>
+      </div>
+    </main>
+
+    <div class="menu-list">
+      <ul class="menu-list-body list-reset">
+        <li class="menu-list-body__item">
+          <a href="timer-game.html" class="menu-list-body__item-link">
+            <div class="menu-list-body__item-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 13 16"
+                fill="none"
+              >
+                <path
+                  d="M4.16678 1H8.83344M6.50011 10.3333V5.66667M10.3501 5.70556C11.4131 6.76852 11.9446 8.05185 11.9446 9.55556C11.9446 11.0593 11.4131 12.3426 10.3501 13.4056C9.28715 14.4685 8.00381 15 6.50011 15C4.9964 15 3.71307 14.4685 2.65011 13.4056C1.58715 12.3426 1.05566 11.0593 1.05566 9.55556C1.05566 8.05185 1.58715 6.76852 2.65011 5.70556C3.71307 4.64259 4.9964 4.11111 6.50011 4.11111C8.00381 4.11111 9.28715 4.64259 10.3501 5.70556ZM10.3501 5.70556L11.9446 4.11111"
+                  stroke="white"
+                />
+              </svg>
+            </div>
+
+            <p>Таймер</p>
+          </a>
+        </li>
+
+        <li class="menu-list-body__item">
+          <a href="./gamer-panel.html" class="menu-list-body__item-link active">
+            <div class="menu-list-body__item-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+              >
+                <circle
+                  cx="12.2873"
+                  cy="12.3468"
+                  r="10.7086"
+                  stroke="white"
+                  stroke-width="1.50313"
+                />
+                <circle
+                  cx="12.2873"
+                  cy="10.6245"
+                  r="3.833"
+                  stroke="white"
+                  stroke-width="1.50313"
+                />
+                <path
+                  d="M19.099 21.2691C19.099 17.5072 16.0494 14.4575 12.2874 14.4575C8.52553 14.4575 5.47589 17.5072 5.47589 21.2691"
+                  stroke="white"
+                  stroke-width="1.50313"
+                />
+              </svg>
+            </div>
+
+            <p>Команди</p>
+          </a>
+        </li>
+
+        <li class="menu-list-body__item">
+          <a href="./rules-game.html" class="menu-list-body__item-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+            >
+              <path
+                d="M7.36409 7.9251H17.886M7.36409 12.4345H12.625M8.01397 19.5699L11.8793 21.7786C12.3414 22.0427 12.9087 22.0427 13.3708 21.7786L17.2361 19.5699C17.6454 19.336 18.1407 19.3077 18.5739 19.4934L21.0517 20.5553C22.0435 20.9804 23.1469 20.2528 23.1469 19.1737V3.41572C23.1469 2.58557 22.4739 1.9126 21.6438 1.9126H3.60627C2.77612 1.9126 2.10315 2.58557 2.10315 3.41572V19.1737C2.10315 20.2528 3.20652 20.9804 4.19839 20.5553L6.6761 19.4934C7.10938 19.3077 7.60468 19.336 8.01397 19.5699Z"
+                stroke="white"
+                stroke-width="1.50313"
+              />
+            </svg>
+
+            <p>Правила</p>
+          </a>
+        </li>
+
+        <li class="menu-list-body__item">
+          <a href="./info.html" class="menu-list-body__item-link">
+            <div class="menu-list-body__item-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="white"
+              >
+                <path
+                  d="M2.40137 2.10596V1.35439C1.98629 1.35439 1.6498 1.69088 1.6498 2.10596H2.40137ZM23.4451 2.10596H24.1967C24.1967 1.69088 23.8602 1.35439 23.4451 1.35439V2.10596ZM23.4451 17.6603V18.4118C23.8602 18.4118 24.1967 18.0754 24.1967 17.6603H23.4451ZM6.94213 17.6603V16.9087C6.777 16.9087 6.61646 16.9631 6.48533 17.0635L6.94213 17.6603ZM2.40137 21.1358H1.6498V22.6575L2.85817 21.7326L2.40137 21.1358ZM2.40137 2.85752H23.4451V1.35439H2.40137V2.85752ZM22.6936 2.10596V17.6603H24.1967V2.10596H22.6936ZM23.4451 16.9087H6.94213V18.4118H23.4451V16.9087ZM6.48533 17.0635L1.94457 20.539L2.85817 21.7326L7.39894 18.2571L6.48533 17.0635ZM3.15293 21.1358V2.10596H1.6498V21.1358H3.15293Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+
+            <p>Інформація</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="panel-bg-bottom"></div>
+
+    <script defer src="./module/jquery/jquery.min.js"></script>
+    <script defer src="./js/add-comp.js"></script>
+    <script defer src="./js/teams.js"></script>
+
+    <script defer src="js/create-team.js"></script>
+    <script defer src="js/animation.js"></script>
+    <script defer src="js/theme-change.js"></script>
+    <script defer src="js/local-storage.js"></script>
+    <script src="js/move-block.js"></script>
+  </body>
+</html>

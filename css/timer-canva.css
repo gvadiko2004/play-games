@@ -1,0 +1,9 @@
+#canvas {
+  top: 40px !important;
+}
+
+@media (max-width: 440px) {
+  #canvas {
+    top: 25px !important;
+  }
+}

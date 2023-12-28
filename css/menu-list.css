@@ -1,0 +1,98 @@
+.menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 481px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 20px;
+  border: 1.503px solid #1b1b1b;
+  padding: 12px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
+}
+.menu-list.active {
+  bottom: -200px;
+}
+
+.menu-list-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 0 22px;
+}
+@media screen and (max-width: 375px) {
+  .menu-list-body {
+    padding: 0;
+  }
+}
+.menu-list-body__item-link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7.5px;
+  color: var(--color-white);
+  text-align: center;
+  font-family: var(--fw-Raleway);
+  font-size: 15.031px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.menu-list-body__item-link.active p {
+  opacity: 1;
+}
+.menu-list-body__item-link p {
+  opacity: 0.5;
+}
+.menu-list-body__item-link.active path {
+  stroke: #aefb30;
+  stroke-width: 2px;
+}
+.menu-list-body__item-link.active circle {
+  stroke: #aefb30;
+  stroke-width: 2px;
+}
+.menu-list-body__item-link path.active {
+  stroke: #aefb30;
+}
+.menu-list-body__item-link circle.active {
+  stroke: #aefb30;
+}
+.menu-list-body__item-link:hover p {
+  opacity: 1;
+}
+.menu-list-body__item-link:hover path {
+  stroke: #aefb30;
+  stroke-width: 2px;
+}
+.menu-list-body__item-link:hover circle {
+  stroke: #aefb30;
+  stroke-width: 2px;
+}

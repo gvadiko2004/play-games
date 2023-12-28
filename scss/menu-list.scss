@@ -1,0 +1,146 @@
+.menu-list {
+    display: flex;
+    max-width: 481px;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 20px;
+    border: 1.503px solid var(--gray_bg);
+    padding: 12px;
+    margin: 0 auto;
+
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    z-index: 10;
+
+    bottom: -100%;
+    animation: menuaAnimetaion 1s ease-out forwards;
+
+    @keyframes menuaAnimetaion {
+        0% {
+            bottom: -100%;
+        }
+
+        100% {
+            bottom: 30px;
+        }
+    }
+
+    @media screen and (max-width: 440px) {
+        /* Adjusting properties for smaller screens */
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        border-radius: 0;
+        padding: 8px 20px;
+
+        /* Redefine animation for smaller screens */
+        animation: menuaAnimetaionSmall 1s ease-out forwards;
+
+        @keyframes menuaAnimetaionSmall {
+            0% {
+                bottom: -100%;
+            }
+
+            100% {
+                bottom: 0;
+            }
+        }
+    }
+
+    &.active {
+        transform: translate(-50%, 220px);
+    }
+}
+
+.menu-list-body {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 22px;
+
+    @media screen and (max-width: 375px) {
+        padding: 0;
+    }
+
+    &__item-link {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7.5px;
+
+        color: var(--color-white);
+        text-align: center;
+        font-family: var(--fw-Raleway);
+        font-size: 15.031px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        &.active {
+            p {
+                opacity: 1;
+            }
+        }
+
+        p {
+            opacity: 0.5;
+        }
+
+        &.active {
+            path {
+                stroke: #aefb30;
+                stroke-width: 2px;
+            }
+
+            circle {
+                stroke: #aefb30;
+                stroke-width: 2px;
+            }
+        }
+
+        path {
+            &.active {
+                stroke: #aefb30;
+            }
+        }
+
+        circle {
+            &.active {
+                stroke: #aefb30;
+            }
+        }
+
+        &:hover {
+            p {
+                opacity: 1;
+            }
+
+            path {
+                stroke: #aefb30;
+                stroke-width: 2px;
+            }
+
+            circle {
+                stroke: #aefb30;
+                stroke-width: 2px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .menu-list-body__item-link {
+        font-size: 10px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

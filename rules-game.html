@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My profile</title>
+    <link rel="icon" href="./images/Vector.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./module/normalize/normalize.css" />
+    <link rel="stylesheet" href="./module/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./module/swiper/swiper.min.css" />
+
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/dark-theme.css" id="theme-change" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!-- <div id="canvas"></div> -->
+
+    <main class="main timer-game">
+      <header class="header">
+        <button class="header-button header-voice-button active">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+          >
+            <path
+              d="M10.2402 23.1H14.5825M4.06067 17.8938C4.06066 17.2191 4.36407 16.663 4.99641 15.9151C6.04835 14.6709 6.81644 14.0641 6.81644 12.4363C6.81644 6.19571 9.28399 5.08301 12.3279 5.08301C15.3717 5.08301 17.8393 5.92508 17.8393 12.4363C17.8393 14.0641 18.6074 14.6709 19.6593 15.9151C20.2916 16.663 20.5951 17.2191 20.595 17.8938C20.595 19.2686 19.3424 19.5603 18.2151 19.5603H6.44061C5.31327 19.5603 4.06068 19.2686 4.06067 17.8938Z"
+              stroke="white"
+              stroke-width="3.00625"
+              stroke-linecap="round"
+            />
+            <path
+              d="M1.5459 7.25638C1.5459 5.03654 2.7489 3.09767 4.53852 2.05615"
+              stroke="white"
+              stroke-width="3.00625"
+              stroke-linecap="round"
+            />
+            <path
+              d="M22.5359 7.25638C22.5359 5.03654 21.3329 3.09767 19.5433 2.05615"
+              stroke="white"
+              stroke-width="3.00625"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+
+        <button class="header-button header-voice-button-off">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M4.27869 10.9085V6.09095C4.27869 5.53866 3.83097 5.09095 3.27869 5.09095H2C1.44772 5.09095 1 5.53866 1 6.09095V9.90846C1 10.4607 1.44772 10.9085 2 10.9085H4.27869ZM4.27869 10.9085L6.79616 12.705C7.45808 13.1774 8.37705 12.7042 8.37705 11.891V4.10866C8.37705 3.29548 7.45808 2.82231 6.79617 3.29467L4.69781 4.79212C4.4348 4.97981 4.27869 5.283 4.27869 5.60611L4.27869 10.9085ZM10.6284 10.1268L15 5.87264M15 10.1268L10.6284 5.87264"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+
+        <a href="./timer-game.html" class="header-button header-logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="149"
+            height="16"
+            viewBox="0 0 149 16"
+            fill="none"
+          >
+            <path
+              d="M0.846863 0.0625L8.42434 15.0938H14.4863L17.5173 8.17938L20.5483 15.0938H26.6103L33.8847 0.0625H29.0351L23.5793 11.4863L19.0328 1.86625H16.0018L11.1522 11.4863L5.69645 0.0625H0.846863Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M34.1878 5.47375C34.1878 2.4852 36.6304 0.0625 39.6436 0.0625H56.0109C59.0241 0.0625 61.4667 2.4852 61.4667 5.47375V9.6825C61.4667 12.6711 59.0241 15.0938 56.0109 15.0938H39.6436C36.6304 15.0938 34.1878 12.6711 34.1878 9.6825V5.47375ZM39.6436 4.8725H56.0109C56.3457 4.8725 56.6171 5.14169 56.6171 5.47375V9.6825C56.6171 10.0146 56.3457 10.2838 56.0109 10.2838H39.6436C39.3088 10.2838 39.0374 10.0146 39.0374 9.6825V5.47375C39.0374 5.14169 39.3088 4.8725 39.6436 4.8725Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M92.989 0.0625V15.0938H113.6C116.613 15.0938 119.056 12.6711 119.056 9.6825V5.47375C119.056 2.4852 116.613 0.0625 113.6 0.0625H92.989ZM113.6 4.8725H97.8386V10.2838H113.6C113.935 10.2838 114.206 10.0146 114.206 9.6825V5.47375C114.206 5.14169 113.935 4.8725 113.6 4.8725Z"
+              fill="white"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M86.1531 12.6694C88.626 12.4496 90.5643 10.3887 90.5643 7.87875V4.8725C90.5643 2.21601 88.393 0.0625 85.7147 0.0625H64.4977V15.0938H69.3473V12.6888H80.8651L82.9868 15.0938H88.7457L86.1531 12.6694ZM85.7147 4.8725H69.3473V7.87875H85.7147V4.8725Z"
+              fill="white"
+            />
+            <path
+              d="M124.511 9.6825L121.48 0.0625H125.724L127.429 5.47375L142.205 5.47375L143.91 0.0625H148.153L145.122 9.6825H137.242V15.0938H132.392V9.6825H124.511Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+
+        <button class="header-button header-theme-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+          >
+            <path
+              d="M12.0562 4.92575V2.05615M12.0562 23.0999V20.2303M19.7085 12.578H22.5781M1.53436 12.578H4.40397M6.64526 7.16705L4.61615 5.13794M19.4963 20.0181L17.4672 17.989M17.4672 7.16705L19.4963 5.13794M4.61615 20.0181L6.64526 17.989M12.0562 16.4042C13.1244 16.4042 14.0291 16.0335 14.7704 15.2922C15.5117 14.5509 15.8824 13.6462 15.8824 12.578C15.8824 11.5099 15.5117 10.6052 14.7704 9.86386C14.0291 9.12255 13.1244 8.75189 12.0562 8.75189C10.9881 8.75189 10.0834 9.12255 9.34207 9.86386C8.60076 10.6052 8.2301 11.5099 8.2301 12.578C8.2301 13.6462 8.60076 14.5509 9.34207 15.2922C10.0834 16.0335 10.9881 16.4042 12.0562 16.4042Z"
+              stroke="white"
+              stroke-width="3.00625"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <button class="header-button header-theme-button-dark">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 17 16"
+            fill="none"
+          >
+            <path
+              d="M8.97274 15C10.5385 15 11.944 14.5685 13.1895 13.7056C14.1287 13.0549 14.8757 12.2548 15.4304 11.3056C15.6583 10.9157 15.2908 10.4761 14.8442 10.543C14.4883 10.5964 14.1325 10.6231 13.7766 10.6231C11.5882 10.6231 9.72446 9.8536 8.18543 8.31457C6.6464 6.77554 5.87689 4.91181 5.87689 2.72336C5.87689 2.36752 5.90358 2.01167 5.95695 1.65583C6.02394 1.20925 5.5843 0.841714 5.19442 1.06955C4.24516 1.62428 3.44514 2.37126 2.79438 3.3105C1.93146 4.55596 1.5 5.96155 1.5 7.52726C1.5 9.59116 2.22948 11.3526 3.68844 12.8116C5.14741 14.2705 6.90884 15 8.97274 15Z"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <div class="container">
+        <div class="rules">
+          <div class="rules-banner">
+            <h1 class="rules-banner__title">Правила настільної гри WORDY</h1>
+
+            <button class="rules-banner-button">
+              <div class="rules-banner-button__left">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                >
+                  <path
+                    d="M28.25 14.201C29.25 14.7784 29.25 16.2217 28.25 16.7991L10.2499 27.1914C9.24992 27.7688 7.99992 27.0471 7.99992 25.8924L7.99992 5.1077C7.99992 3.953 9.24992 3.23131 10.2499 3.80866L28.25 14.201Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+
+              <div class="rules-banner-button__right">
+                <span>Відео інструкція</span>
+                <span>3 хв.</span>
+              </div>
+            </button>
+          </div>
+
+          <ul class="rules-list">
+            <h3 class="rules-list__title"><p>Загальні правила</p></h3>
+
+            <!-- NEW LIST -->
+
+            <li class="rules-list__item">
+              <div class="rules-list__start">
+                <div class="rules-list__item-left">
+                  <div class="rules-list__item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="25"
+                      viewBox="0 0 24 25"
+                      fill="none"
+                    >
+                      <path
+                        d="M11.0995 5.72656H1.49951V15.3266H6.29951V20.1266H11.0995V5.72656Z"
+                        stroke="white"
+                        stroke-width="3"
+                        class="one"
+                      />
+                      <path
+                        d="M22.4995 5.72656H12.8995V15.3266H17.6995V20.1266H22.4995V5.72656Z"
+                        stroke="white"
+                        stroke-width="3"
+                        class="two"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="rules-list__item-title">
+                    <p>Як грати в WORDY</p>
+                  </div>
+                </div>
+
+                <div class="rules-list__item-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    viewBox="0 0 18 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.50003 17.875L12.1377 10L4.50003 2.125"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rules-dropdown">
+                <h3 class="rules-dropdown-title">Початок гри</h3>
+
+                <p class="rules-dropdown-subtitle">
+                  Гравцям потрібно поділитись на команди, кількість гравців і
+                  команд (мін. 2 команди, по 2 гравці в команді) буде залежати
+                  від кількості всіх гравців. Ви можете вибрати капітанів які
+                  наберуть собі команду, або скористатись застосунком в
+                  <span class="line">розділі “Команди”</span> який автоматично в
+                  випадковому порядку розподілить гравців.
+                </p>
+
+                <p class="rules-dropdown-subtitle">
+                  Командам потрібно обрати цифру від 1 до 8 (можна змінювати в
+                  процесі гри перед тим як гравець візьме картку з завданням),
+                  біля якої буде завдання в картці. Ця цифра буде потрібна для
+                  наступних завдань:
+                  <span>Слова, Жести, 5 іменників, Імена.</span>
+                </p>
+
+                <h3 class="rules-dropdown-title">Маркування в картках</h3>
+
+                <img src="./images/rules.svg" alt="" />
+
+                <h3 class="rules-dropdown-title">Процес гри</h3>
+
+                <ul class="rules-dropdown-list">
+                  <li class="rules-dropdown-list__num">
+                    По черзі кожен гравець з кожної команди бере верхню картку з
+                    загальної колоди.
+                  </li>
+
+                  <li class="rules-dropdown-list__num">
+                    Запустіть таймер на 60 або 6 сек. (в залежності від
+                    завдання).
+                  </li>
+
+                  <li class="rules-dropdown-list__num">
+                    Повідомте тип завдання своїй команді і виконайте завдання
+                    (тип завдання і час на виконання вказано в нижній частині
+                    картки на кольоровому фоні) що вказано в картці, ваша
+                    команда повинна розгадати і назвати це слово або
+                    словосполучення так як вказано в картці.
+                  </li>
+
+                  <div class="rules-dropdown-imp">
+                    <div class="rules-dropdown-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <path
+                          d="M6.13397 1.5C6.51887 0.833333 7.48113 0.833333 7.86603 1.5L12.1962 9C12.5811 9.66667 12.0999 10.5 11.3301 10.5H2.66987C1.90007 10.5 1.41895 9.66667 1.80385 9L6.13397 1.5Z"
+                          stroke="#DD8D16"
+                        />
+                        <path
+                          d="M7.09131 4.34448V6.23582M7.09131 8.40102V8.43729"
+                          stroke="#DD8D16"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    <p class="rules-dropdown-imp__text">
+                      Важливо! При виконанні завдання не можна використовувати
+                      однокореневі слова і переклад з інших мов. Якщо хтось
+                      порушує це правило - гравець програв і повинен відкласти
+                      картку в загальну колоду і передати естафету супернику.
+                    </p>
+                  </div>
+
+                  <li class="rules-dropdown-list__num">
+                    Якщо гравець виконав завдання вчасно і команда правильно
+                    назвала указане слово або словосполучення, то ця картка йде
+                    в залік команди. Якщо гравець не виконав завдання або
+                    виконав не вчасно то ця картка повертається в кінець колоди.
+                  </li>
+
+                  <li class="rules-dropdown-list__num">
+                    Гра триває доки команда не набере 60 балів або кількість
+                    білів за домовленістю гравців. Якщо команда набрала 60
+                    балів, а коло для інших гравців не закінчилося - потрібно
+                    завершити коло для всіх гравців і тоді вже завершити
+                    фінальний підрахунок балів.
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- NEW LIST -->
+
+            <h3 class="rules-list__title"><p>Завдання</p></h3>
+
+            <li class="rules-list__item">
+              <div class="rules-list__start">
+                <div class="rules-list__item-left">
+                  <div class="rules-list__item-icon five">5</div>
+
+                  <div class="rules-list__item-title five-text">
+                    <p>іменників</p>
+                  </div>
+                </div>
+
+                <div class="rules-list__item-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    viewBox="0 0 18 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.50003 17.875L12.1377 10L4.50003 2.125"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rules-dropdown">
+                <p class="rules-dropdown-subtitle">
+                  Гравцям потрібно поділитись на команди, кількість гравців і
+                  команд (мін. 2 команди, по 2 гравці в команді) буде залежати
+                  від кількості всіх гравців. Ви можете вибрати капітанів які
+                  наберуть собі команду, або скористатись застосунком в
+                  <span class="line">розділі “Команди”</span> який автоматично в
+                  випадковому порядку розподілить гравців.
+                </p>
+
+                <h3 class="rules-dropdown-title">
+                  Команда повинна назвати вибране слово гравцем.
+                </h3>
+
+                <div class="rules-dropdown-imp">
+                  <p class="rules-dropdown-imp__text">
+                    <span>Приклад для слова: Україна</span>
+
+                    <span class="def-text"
+                      >5 іменників: держава, батьківщина, країна, центр,
+                      Європа</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- LIST -->
+
+            <li class="rules-list__item">
+              <div class="rules-list__start">
+                <div class="rules-list__item-left">
+                  <div class="rules-list__item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M8.49949 1.5H15.4995M11.9995 15.5V8.5M17.7745 8.55833C19.3689 10.1528 20.1662 12.0778 20.1662 14.3333C20.1662 16.5889 19.3689 18.5139 17.7745 20.1083C16.18 21.7028 14.255 22.5 11.9995 22.5C9.74394 22.5 7.81894 21.7028 6.22449 20.1083C4.63005 18.5139 3.83282 16.5889 3.83282 14.3333C3.83282 12.0778 4.63005 10.1528 6.22449 8.55833C7.81894 6.96389 9.74394 6.16667 11.9995 6.16667C14.255 6.16667 16.18 6.96389 17.7745 8.55833ZM17.7745 8.55833L20.1662 6.16667"
+                        stroke="white"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="rules-list__item-title">
+                    <p>Бліц</p>
+                  </div>
+                </div>
+
+                <div class="rules-list__item-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    viewBox="0 0 18 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.50003 17.875L12.1377 10L4.50003 2.125"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rules-dropdown">
+                <p class="rules-dropdown-subtitle">
+                  За 6 сек. гравцю потрібно виконати завдання що вказано в
+                  картці.
+                </p>
+              </div>
+            </li>
+
+            <!-- NEW LIST -->
+
+            <li class="rules-list__item">
+              <div class="rules-list__start">
+                <div class="rules-list__item-left">
+                  <div class="rules-list__item-icon brends">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="12"
+                      viewBox="0 0 24 12"
+                      fill="none"
+                    >
+                      <path
+                        d="M0 0L5.50156 11.2799H9.90282L12.1034 6.09116L14.3041 11.2799H18.7053L24 0H20.4658L16.5047 8.57274L13.2038 1.35359H11.0031L7.48213 8.57274L3.521 0H0Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="rules-list__item-title">
+                    <p>Бренди</p>
+                  </div>
+                </div>
+
+                <div class="rules-list__item-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    viewBox="0 0 18 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.50003 17.875L12.1377 10L4.50003 2.125"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rules-dropdown">
+                <p class="rules-dropdown-subtitle">
+                  За 60 сек. гравцю словами або жестами розповісти команді три
+                  будь які бренди що вказані в картці.
+                </p>
+
+                <h3 class="rules-dropdown-title">
+                  Команда повинна назвати три з восьми брендів які вказані в
+                  картці.
+                </h3>
+
+                <div class="rules-dropdown-imp">
+                  <p class="rules-dropdown-imp__text">
+                    <span>Приклад для бренду: WORDY</span>
+
+                    <span class="def-text"
+                      >Настільна гра в яку ми зараз граємо</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- NEW LIST -->
+
+            <li class="rules-list__item">
+              <div class="rules-list__start">
+                <div class="rules-list__item-left">
+                  <div class="rules-list__item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M15.3969 1.68158L6.78249 12.3191C6.52594 12.6359 6.75141 13.1086 7.15906 13.1086H9.47084C9.78885 13.1086 10.0206 13.4097 9.93927 13.7171L7.77628 21.8885C7.6424 22.3942 8.29415 22.7238 8.62218 22.3163L17.2187 11.6357C17.4739 11.3187 17.2482 10.8473 16.8413 10.8473H14.603C14.286 10.8473 14.0544 10.548 14.134 10.2412L16.2425 2.10813C16.3733 1.6038 15.7248 1.27668 15.3969 1.68158Z"
+                        stroke="white"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="rules-list__item-title">
+                    <p>Дія</p>
+                  </div>
+                </div>
+
+                <div class="rules-list__item-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    viewBox="0 0 18 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.50003 17.875L12.1377 10L4.50003 2.125"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rules-dropdown">
+                <p class="rules-dropdown-subtitle">
+                  За 6 сек. гравцю потрібно виконати завдання що вказано в
+                  картці.
+                </p>
+              </div>
+            </li>
+
+            <!-- NEW LIST -->
+
+            <li class="rules-list__item">
+              <div class="rules-list__start">
+                <div class="rules-list__item-left">
+                  <div class="rules-list__item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M4.27844 10.9086V5.09107H0.999756V10.9086H4.27844ZM4.27844 10.9086L8.37681 13.8333V2.16663L4.27845 5.09134L4.27844 10.9086ZM10.6282 10.1269L14.9998 5.87276M14.9998 10.1269L10.6282 5.87276"
+                        stroke="white"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="rules-list__item-title">
+                    <p>Жести</p>
+                  </div>
+                </div>
+
+                <div class="rules-list__item-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    viewBox="0 0 18 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.50003 17.875L12.1377 10L4.50003 2.125"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rules-dropdown">
+                <p class="rules-dropdown-subtitle">
+                  За 60 сек. гравцю жестами (без слів) показати команді слово
+                  або словосполучення під тим номером який обрала ваша команда.
+                </p>
+
+                <h3 class="rules-dropdown-title">
+                  Команда повинна назвати вибране слово гравцем.
+                </h3>
+
+                <div class="rules-dropdown-imp">
+                  <p class="rules-dropdown-imp__text">
+                    <span>Приклад для слова: Ложка</span>
+
+                    <span class="def-text"
+                      >Можна показати: як ви ніби їсте бульйон, мішаєте,
+                      набираєте щось.</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- NEW LIST -->
+
+            <li class="rules-list__item">
+              <div class="rules-list__start">
+                <div class="rules-list__item-left">
+                  <div class="rules-list__item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                    >
+                      <path
+                        d="M11 4L12.7961 9.52786H18.6085L13.9062 12.9443L15.7023 18.4721L11 15.0557L6.29772 18.4721L8.09383 12.9443L3.39155 9.52786H9.20389L11 4Z"
+                        stroke="white"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="rules-list__item-title">
+                    <p>Зірки</p>
+                  </div>
+                </div>
+
+                <div class="rules-list__item-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    viewBox="0 0 18 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.50003 17.875L12.1377 10L4.50003 2.125"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rules-dropdown">
+                <p class="rules-dropdown-subtitle">
+                  За 60 сек. гравцю словами або жестами розповісти команді три
+                  будь які знаменитості що вказані в картці.
+                </p>
+
+                <h3 class="rules-dropdown-title">
+                  Команда повинна назвати три з восьми знаменитості які вказані
+                  в картці.
+                </h3>
+
+                <div class="rules-dropdown-imp">
+                  <p class="rules-dropdown-imp__text">
+                    <span>Приклад для знаменитості: Леся Українка</span>
+
+                    <span class="def-text"
+                      >Українська письменниця, перекладачка та культурна діячка,
+                      її портрет зображений на купюрі номіналом 200 грн.</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- NEW LIST -->
+
+            <li class="rules-list__item">
+              <div class="rules-list__start">
+                <div class="rules-list__item-left">
+                  <div class="rules-list__item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                    >
+                      <path
+                        d="M15.1604 8.05005C15.1604 11.916 12.0264 15.05 8.1604 15.05M15.1604 8.05005C15.1604 4.18406 12.0264 1.05005 8.1604 1.05005M15.1604 8.05005C15.1604 6.54475 12.0264 5.32446 8.1604 5.32446C4.29441 5.32446 1.1604 6.54475 1.1604 8.05005M15.1604 8.05005C15.1604 9.55535 12.0264 10.7756 8.1604 10.7756C4.29441 10.7756 1.1604 9.55535 1.1604 8.05005M8.1604 15.05C4.29441 15.05 1.1604 11.916 1.1604 8.05005M8.1604 15.05C9.6657 15.05 10.886 11.916 10.886 8.05005C10.886 4.18406 9.6657 1.05005 8.1604 1.05005M8.1604 15.05C6.6551 15.05 5.43482 11.916 5.43482 8.05005C5.43482 4.18406 6.6551 1.05005 8.1604 1.05005M1.1604 8.05005C1.1604 4.18406 4.29441 1.05005 8.1604 1.05005"
+                        stroke="white"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="rules-list__item-title">
+                    <p>Країни</p>
+                  </div>
+                </div>
+
+                <div class="rules-list__item-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    viewBox="0 0 18 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.50003 17.875L12.1377 10L4.50003 2.125"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rules-dropdown">
+                <p class="rules-dropdown-subtitle">
+                  За 60 сек. гравцю словами або жестами розповісти команді три
+                  будь які країни що вказані в картці.
+                </p>
+
+                <h3 class="rules-dropdown-title">
+                  Команда повинна назвати три з восьми країни які вказані в
+                  картці.
+                </h3>
+
+                <div class="rules-dropdown-imp">
+                  <p class="rules-dropdown-imp__text">
+                    <span>Приклад для країни: Україна</span>
+
+                    <span class="def-text"
+                      >Прапор даної країни з двох кольорів зверху синій знизу
+                      жовтий.</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- NEW LIST -->
+
+            <li class="rules-list__item">
+              <div class="rules-list__start">
+                <div class="rules-list__item-left">
+                  <div class="rules-list__item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                    >
+                      <path
+                        d="M11.2664 6.30839C11.2664 6.78103 11.2664 9.2189 11.2664 9.69153L13.5202 11.2854C14.1375 11.7366 14.9998 11.2898 14.9998 10.5189V5.48112C14.9998 4.71015 14.1375 4.26344 13.5202 4.71462L11.2664 6.30839Z"
+                        stroke="white"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M0.999756 3.94527C0.999756 3.42321 1.41762 3 1.93309 3H10.3331C10.8486 3 11.2664 3.42321 11.2664 3.94527V12.0547C11.2664 12.5768 10.8486 13 10.3331 13H1.93309C1.41762 13 0.999756 12.5768 0.999756 12.0547V3.94527Z"
+                        stroke="white"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="rules-list__item-title">
+                    <p>Кіно</p>
+                  </div>
+                </div>
+
+                <div class="rules-list__item-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    viewBox="0 0 18 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.50003 17.875L12.1377 10L4.50003 2.125"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rules-dropdown">
+                <p class="rules-dropdown-subtitle">
+                  За 60 сек. гравцю словами або жестами розповісти команді три
+                  будь які фільми що вказані в картці.
+                </p>
+
+                <div class="rules-dropdown-rules">
+                  <p class="rules-dropdown-rules__text">
+                    Дозволяється називати рік в якому була прем’єра фільму що
+                    вказано під назвою.
+                  </p>
+                </div>
+
+                <h3 class="rules-dropdown-title">
+                  Команда повинна назвати три з восьми фільмів які вказані в
+                  картці.
+                </h3>
+
+                <div class="rules-dropdown-imp">
+                  <p class="rules-dropdown-imp__text">
+                    <span>Приклад для фільму: Черкаси</span>
+
+                    <span class="def-text"
+                      >Український фільм представлений в 2019 році про оборону
+                      однойменного морського тральщика. Його назва співпадає з
+                      назвою одного з міст в центральній частині України.</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- NEW LIST -->
+
+            <li class="rules-list__item">
+              <div class="rules-list__start">
+                <div class="rules-list__item-left">
+                  <div class="rules-list__item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                    >
+                      <circle
+                        cx="8"
+                        cy="7.22461"
+                        r="2"
+                        stroke="white"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M13.9995 6.64811C13.9995 12.3508 7.99951 15.2288 7.99951 15.2288C7.99951 15.2288 1.99951 12.3508 1.99951 6.64811C1.99951 3.65509 4.9407 1.22876 7.99951 1.22876C11.0583 1.22876 13.9995 3.65509 13.9995 6.64811Z"
+                        stroke="white"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="rules-list__item-title">
+                    <p>Пам'ятки</p>
+                  </div>
+                </div>
+
+                <div class="rules-list__item-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    viewBox="0 0 18 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.50003 17.875L12.1377 10L4.50003 2.125"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rules-dropdown">
+                <p class="rules-dropdown-subtitle">
+                  За 60 сек. гравцю словами або жестами розповісти команді три
+                  будь які пам'ятки що вказані в картці.
+                </p>
+
+                <div class="rules-dropdown-rules">
+                  <p class="rules-dropdown-rules__text">
+                    Дозволяється називати країну, місто де знаходиться пам'ятка
+                    що вказано під назвою.
+                  </p>
+                </div>
+
+                <h3 class="rules-dropdown-title">
+                  Команда повинна назвати три з восьми пам'ятки які вказані в
+                  картці.
+                </h3>
+
+                <div class="rules-dropdown-imp">
+                  <p class="rules-dropdown-imp__text">
+                    <span>Приклад для фільму: Хрещатик</span>
+
+                    <span class="def-text"
+                      >Головна і сама популярна вулиця яка знаходиться в центрі
+                      Києва.</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- NEW LIST -->
+
+            <li class="rules-list__item">
+              <div class="rules-list__start">
+                <div class="rules-list__item-left">
+                  <div class="rules-list__item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                    >
+                      <path
+                        d="M1.03247 1.35767V0.357666C0.480186 0.357666 0.0324707 0.805381 0.0324707 1.35767L1.03247 1.35767ZM15.0325 1.35767H16.0325C16.0325 0.805381 15.5848 0.357666 15.0325 0.357666V1.35767ZM15.0325 11.7057V12.7057C15.5848 12.7057 16.0325 12.2579 16.0325 11.7057H15.0325ZM4.05336 11.7057V10.7057C3.83363 10.7057 3.62003 10.778 3.44555 10.9116L4.05336 11.7057ZM1.03247 14.0179H0.0324707V16.0426L1.64027 14.812L1.03247 14.0179ZM1.03247 2.35767H15.0325V0.357666H1.03247V2.35767ZM14.0325 1.35767V11.7057H16.0325V1.35767H14.0325ZM15.0325 10.7057H4.05336V12.7057H15.0325V10.7057ZM3.44555 10.9116L0.424668 13.2238L1.64027 14.812L4.66116 12.4997L3.44555 10.9116ZM2.03247 14.0179V1.35767H0.0324707V14.0179H2.03247Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="rules-list__item-title">
+                    <p>Слова</p>
+                  </div>
+                </div>
+
+                <div class="rules-list__item-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    viewBox="0 0 18 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.50003 17.875L12.1377 10L4.50003 2.125"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rules-dropdown">
+                <p class="rules-dropdown-subtitle">
+                  За 60 сек. гравцю словами (без жестів) показати команді слово
+                  або словосполучення під тим номером який обрала ваша команда.
+                </p>
+
+                <h3 class="rules-dropdown-title">
+                  Команда має назвати вибране слово.
+                </h3>
+
+                <div class="rules-dropdown-imp">
+                  <p class="rules-dropdown-imp__text">
+                    <span>Приклад для слова: Україна</span>
+
+                    <span class="def-text"
+                      >Прапор даної країни з двох кольорів зверху синій знизу
+                      жовтий.</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- NEW LIST -->
+
+            <li class="rules-list__item">
+              <div class="rules-list__start">
+                <div class="rules-list__item-left">
+                  <div class="rules-list__item-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="17"
+                      viewBox="0 0 16 17"
+                      fill="none"
+                    >
+                      <path
+                        d="M14.7561 15.2288V15.2095C14.2145 13.8577 13.2791 12.7027 12.0732 11.8965C10.8672 11.0903 9.44708 10.6708 7.99973 10.693C6.55251 10.6707 5.13242 11.0901 3.92645 11.8961C2.72047 12.702 1.78513 13.8568 1.24341 15.2084V15.2288M11.1446 4.39715C11.1443 5.02341 10.9597 5.63552 10.6139 6.15609C10.2682 6.67666 9.77687 7.08231 9.2022 7.32175C8.62753 7.5612 7.99532 7.62368 7.38539 7.50131C6.77546 7.37894 6.21522 7.07721 5.77557 6.63426C5.33592 6.19132 5.0366 5.62704 4.91539 5.01279C4.79417 4.39853 4.85653 3.76187 5.0946 3.18331C5.33267 2.60474 5.7357 2.11025 6.25282 1.76235C6.76995 1.41445 7.37789 1.22876 7.9998 1.22876C8.41292 1.22876 8.8219 1.31072 9.20355 1.46997C9.5852 1.62921 9.93199 1.86262 10.224 2.15685C10.5161 2.45108 10.7478 2.80038 10.9058 3.18477C11.0637 3.56917 11.1448 3.98114 11.1446 4.39715Z"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  <div class="rules-list__item-title">
+                    <p>Імена</p>
+                  </div>
+                </div>
+
+                <div class="rules-list__item-right">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="20"
+                    viewBox="0 0 18 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.50003 17.875L12.1377 10L4.50003 2.125"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rules-dropdown">
+                <p class="rules-dropdown-subtitle">
+                  За 60 сек. гравцю словами розповісти команді три імені які
+                  вказані під тим номером який обрала ваша команда.
+                </p>
+
+                <h3 class="rules-dropdown-title">
+                  Для заліку команда має назвати всі три імені які вказані в
+                  рядку
+                </h3>
+
+                <div class="rules-dropdown-imp">
+                  <p class="rules-dropdown-imp__text">
+                    <span
+                      >Приклад для імен: Володимир, Олександр, Катерина</span
+                    >
+
+                    <span class="def-text"
+                      >Володимир: великий князь київський, його прізвище Мономах
+                      Олександр: як звати мого сина/батька/сусіда/брата і тд.
+                      Катерина: жіноче їм’я яке співпадає з поемою Тараса
+                      Шевченка</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-list">
+        <ul class="menu-list-body list-reset">
+          <li class="menu-list-body__item">
+            <a href="timer-game.html" class="menu-list-body__item-link">
+              <div class="menu-list-body__item-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 13 16"
+                  fill="none"
+                >
+                  <path
+                    d="M4.16678 1H8.83344M6.50011 10.3333V5.66667M10.3501 5.70556C11.4131 6.76852 11.9446 8.05185 11.9446 9.55556C11.9446 11.0593 11.4131 12.3426 10.3501 13.4056C9.28715 14.4685 8.00381 15 6.50011 15C4.9964 15 3.71307 14.4685 2.65011 13.4056C1.58715 12.3426 1.05566 11.0593 1.05566 9.55556C1.05566 8.05185 1.58715 6.76852 2.65011 5.70556C3.71307 4.64259 4.9964 4.11111 6.50011 4.11111C8.00381 4.11111 9.28715 4.64259 10.3501 5.70556ZM10.3501 5.70556L11.9446 4.11111"
+                    stroke="white"
+                  />
+                </svg>
+              </div>
+
+              <p>Таймер</p>
+            </a>
+          </li>
+
+          <li class="menu-list-body__item">
+            <a href="./gamer-panel.html" class="menu-list-body__item-link">
+              <div class="menu-list-body__item-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                >
+                  <circle
+                    cx="12.2873"
+                    cy="12.3468"
+                    r="10.7086"
+                    stroke="white"
+                    stroke-width="1.50313"
+                  />
+                  <circle
+                    cx="12.2873"
+                    cy="10.6245"
+                    r="3.833"
+                    stroke="white"
+                    stroke-width="1.50313"
+                  />
+                  <path
+                    d="M19.099 21.2691C19.099 17.5072 16.0494 14.4575 12.2874 14.4575C8.52553 14.4575 5.47589 17.5072 5.47589 21.2691"
+                    stroke="white"
+                    stroke-width="1.50313"
+                  />
+                </svg>
+              </div>
+
+              <p>Команди</p>
+            </a>
+          </li>
+
+          <li class="menu-list-body__item">
+            <a
+              href="./rules-game.html"
+              class="menu-list-body__item-link active"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+              >
+                <path
+                  d="M7.36409 7.9251H17.886M7.36409 12.4345H12.625M8.01397 19.5699L11.8793 21.7786C12.3414 22.0427 12.9087 22.0427 13.3708 21.7786L17.2361 19.5699C17.6454 19.336 18.1407 19.3077 18.5739 19.4934L21.0517 20.5553C22.0435 20.9804 23.1469 20.2528 23.1469 19.1737V3.41572C23.1469 2.58557 22.4739 1.9126 21.6438 1.9126H3.60627C2.77612 1.9126 2.10315 2.58557 2.10315 3.41572V19.1737C2.10315 20.2528 3.20652 20.9804 4.19839 20.5553L6.6761 19.4934C7.10938 19.3077 7.60468 19.336 8.01397 19.5699Z"
+                  stroke="white"
+                  stroke-width="1.50313"
+                />
+              </svg>
+
+              <p>Правила</p>
+            </a>
+          </li>
+
+          <li class="menu-list-body__item">
+            <a href="./info.html" class="menu-list-body__item-link">
+              <div class="menu-list-body__item-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="white"
+                >
+                  <path
+                    d="M2.40137 2.10596V1.35439C1.98629 1.35439 1.6498 1.69088 1.6498 2.10596H2.40137ZM23.4451 2.10596H24.1967C24.1967 1.69088 23.8602 1.35439 23.4451 1.35439V2.10596ZM23.4451 17.6603V18.4118C23.8602 18.4118 24.1967 18.0754 24.1967 17.6603H23.4451ZM6.94213 17.6603V16.9087C6.777 16.9087 6.61646 16.9631 6.48533 17.0635L6.94213 17.6603ZM2.40137 21.1358H1.6498V22.6575L2.85817 21.7326L2.40137 21.1358ZM2.40137 2.85752H23.4451V1.35439H2.40137V2.85752ZM22.6936 2.10596V17.6603H24.1967V2.10596H22.6936ZM23.4451 16.9087H6.94213V18.4118H23.4451V16.9087ZM6.48533 17.0635L1.94457 20.539L2.85817 21.7326L7.39894 18.2571L6.48533 17.0635ZM3.15293 21.1358V2.10596H1.6498V21.1358H3.15293Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+
+              <p>Інформація</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script defer src="./module/jquery/jquery.min.js"></script>
+
+    <script defer src="js/swiper.js"></script>
+    <script defer src="js/slider.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/create-team.js"></script>
+    <script defer src="js/canva.js"></script>
+    <script defer src="js/animation.js"></script>
+    <script defer src="js/theme-change.js"></script>
+    <script defer src="js/local-storage.js"></script>
+    <script defer src="./js/app.js"></script>
+    <script defer src="./js/anime.js"></script>
+
+    <script defer src="./module/fancybox/jquery.fancybox.min.js"></script>
+    <script defer src="./module/parallax/parallax.min.js"></script>
+    <script defer src="./module/swiper/swiper-bundle.min.js"></script>
+    <script defer src="./js/bundle.min.js"></script>
+  </body>
+</html>

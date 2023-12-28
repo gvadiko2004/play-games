@@ -1,0 +1,52 @@
+* {
+  transition: 0.2s ease-in-out;
+  color: #fff;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--fw-Raleway);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+a {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+button,
+input {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  background-color: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
